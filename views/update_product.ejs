@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+        font-size: 30px;
+        background-image: linear-gradient(lightgreen,lightyellow,lightblue,skyblue);
+    }
+        input{
+            width: 200px;
+            height:40px;
+            border-radius: 10px;
+            border: 2px solid red;
+        }
+        form{
+            margin: 50px;
+            position: relative;
+            align-items: center;
+        }
+         button{
+            background: black;
+            color:#fff;
+            border:2px solid red;
+            width:70px;       
+            height: 30px;
+            border-radius: 10px;
+         }
+    </style>
+</head>
+<body>
+    <h1 align="center">product update list</h1>
+    <form action="/update_product" method="post" align="center">
+        enter product name <input type="text"  name="product_name" required><br><br>
+        enter product price <input type="number" name="product_price" required><br><br>
+        enter product description <textarea name="product_description"  cols="20" rows="10"></textarea><br><br>
+        <button>update</button>
+    </form>
+<%
+    if(message)
+    {%>
+        <script>
+                alert('<%=message%>')
+                window.location='http://localhost:4020/displayproduct'
+
+        </script>
+    <%}
+    %>
+</body>
+</html>

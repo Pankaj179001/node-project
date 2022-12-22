@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin pannel</title>
+    <style>
+        body{
+            font-size: 30px;
+            background-image: linear-gradient(lightyellow,lightyellow,lightblue,skyblue,lightyellow,lightblue);
+        }
+        h1 {
+        display: block;
+        font-size: 1.6em;
+        margin-bottom: 0.6em;
+        font-weight: bold;
+        color: red;
+      }
+      input{
+        height:30px;
+      }
+      button{
+            background: black;
+            color:#fff;
+            border:2px solid red;
+            width:70px;       
+            height: 35px;
+            border-radius: 10px;
+         }
+        </style>
+</head>
+<body>
+    <h1 align="center">admin controll pannel</h1>
+    <h3 align="right"><a href="/">go to home</a></h3>
+    <center>  <form action="/admin_check" method="post">
+        username: <input type="text" name="admin_name" required placeholder="enter username"><br><br><br>
+        password: <input type="text" name="admin_password" required placeholder="enter password"><br><br><br>
+        <button>login</button>
+    </form>
+</center><%
+  if(message){%>
+    <h3 align="center"><%=message%></h3>  
+
+    <%}
+%>
+</body>
+</html>

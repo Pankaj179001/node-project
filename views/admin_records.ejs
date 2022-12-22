@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+        font-size: 30px;
+        background-image: linear-gradient(lightgreen,lightyellow,lightblue,skyblue);
+    }
+        input{
+            width: 200px;
+            height:40px;
+            border-radius: 10px;
+            border: 2px solid red;
+        }
+        form{
+            margin: 50px;
+            position: relative;
+            align-items: center;
+        }
+</style>
+<body>
+    <h1 align="center"> welcome to admin pannel </h1>
+
+<a href="/add_admin">make other admin</a>
+<h3 align="center"><a href="/addproduct"> add product</a></h3>
+<h3 align="center"><a href="/logout_admin"> logout </a></h3>
+<h3 align="center"><a href="/displayproduct">display products</a></h3><br>
+<h3 align="center"><a href="/signed_user">signed IN users</a></h3><br>
+<h3 align="center"><a href="/display_product">display products join</a></h3><br>
+
+<!-- <h3 align="center"><a href="/data_match">data join</a></h3><br> -->
+
+<%=message%>
+</body>
+</html>

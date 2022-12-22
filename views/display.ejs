@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <style>body{
+        font-size: 30px;
+        background-image: linear-gradient(lightgreen,lightyellow,lightblue,skyblue);
+    }
+        th,td{
+font-size:20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 align="center" > product list</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">product name</th>
+            <th scope="col">product price</th>
+            <th scope="col">product description</th>
+            
+          </tr>
+        </thead>  
+        <tbody>
+     
+        <%
+        for(i=0;i<message.length;i++)
+        {%>
+         <tr>
+            <td><%=message[i].product_name%></td>
+            <td><%=message[i].product_price%></td>
+            <td><%=message[i].product_description%></td>
+           
+         </tr>
+
+        <%}
+        %>
+        <%=value%>
+        <tbody>
+
+    </table>
+</body>
+</html>

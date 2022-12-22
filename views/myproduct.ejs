@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+        font-size: 30px;
+        background-image: linear-gradient(lightgreen,lightyellow,lightblue,skyblue);
+    }
+        input{
+            width: 200px;
+            height:40px;
+            border-radius: 10px;
+            border: 2px solid red;
+        }
+        form{
+            margin: 50px;
+            position: relative;
+            align-items: center;
+        }
+         button{
+            background: black;
+            color:#fff;
+            border:2px solid red;
+            width:70px;       
+            height: 50px;
+            border-radius: 10px;
+         }
+    </style>
+</head>
+<body>
+    <h1 align="center"> product add form</h1>
+    <center>
+        <h3 align="right"><a href="/admin_check">go back to admin pannel</a></h3>
+        <form action="/addproduct" enctype="multipart/form-data" method="post">
+            product image : <input type="file"name="photo", placeholder="add the product image here"><br><br>
+            product name : <input type="text" name="product_name"  required placeholder="add product name"><br><br>
+            product price : <input type="number" name="product_price" required placeholder="add product price"><br><br>
+           product description:<textarea name="product_description" id="" cols="20" rows="5"></textarea><br><br>
+            <button>add product</button>
+        </form>
+    </center>
+    <h1 align="center"><%=message%></h1>
+    
+</body>
+</html>

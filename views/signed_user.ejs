@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h2 align="center"> signed up users</h2>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">User Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Address</th>
+            <th scope="col">mobile</th>
+            <th scope="col">password</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%
+            for(i=0;i<message.length;i++)
+            {%>
+          <tr>
+            <th scope="row"><%=1+i%></th>
+            <td><%=message[i].name%></td>
+            <td><%=message[i].email%></td>
+            <td><%=message[i].adress%></td>
+            <td><%=message[i].mobile%></td>
+            <td><%=message[i].password%></td>
+          </tr>
+          <%}%>
+        </tbody>
+      </table>
+      
+      
+
+</body>
+</html>

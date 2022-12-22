@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set new admin</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <style>
+         button{
+            background: black;
+            color:#fff;
+            border:2px solid red;
+            width:110px;       
+            height: 50px;
+            border-radius: 10px;
+         }
+          body{
+        font-size: 30px;
+        background-image: linear-gradient(lightgreen,lightyellow,lightblue,skyblue);
+    }
+        
+        form{
+            margin: 50px;
+            position: relative;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center"> add new admin here</h1><br><br>
+    <form action="/add_admin" method="post" align="center">
+        set your username: <input type="text" name="username" required placeholder="enter your username here"><br><br><br>
+        set your passsword: <input type="password" name="password" required placeholder="set your password"><br><br><br>
+        <button>submit</button><br><br>
+    </form>
+  <font color="red"><h3 align="center"> <%=message%></h3> </font>
+</body>
+</html>

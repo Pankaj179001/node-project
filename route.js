@@ -97,6 +97,7 @@ rout.use('/delete_product/:product_name',login_middleware_admin,(req,res)=>{
 rout.use('/update_product',(req,res)=>{
     adding_address.update_product(req,res)
 })
+
 rout.use('/display_product',(req,res)=>{
     adding_address.display_prd(req,res)
 })

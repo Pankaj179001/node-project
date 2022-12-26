@@ -47,8 +47,9 @@ font-size:20px;
             <td><%=message[i].product_name%></td>
             <td><%=message[i].product_price%></td>
             <td><%=message[i].product_description%></td>
+
             <td><a href="/delete_product/<%=message[i].product_name%>"onclick="return confirm('sure to delete?');">delete product</a></td>
-            <td><a href="/update_product/<%=message[i].product_name%>"onclick="return confirm('sure to update?');">update product</td>
+            <td><a href="/update_product?id=<%=message[i]._id%>"onclick="return confirm('sure to update?');">update product</td>
          </tr>
 
         <%}

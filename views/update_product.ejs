@@ -33,7 +33,7 @@
 </head>
 <body>
     <h1 align="center">product update list</h1>
-    <form action="/update_product" method="post" align="center">
+    <form action="/update_product?id=<%=value%>" method="post" align="center">
         enter product name <input type="text"  name="product_name" required><br><br>
         enter product price <input type="number" name="product_price" required><br><br>
         enter product description <textarea name="product_description"  cols="20" rows="10"></textarea><br><br>

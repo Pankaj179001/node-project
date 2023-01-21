@@ -5,6 +5,7 @@ const authentication = require('./controller/usercontroller')
 const admin_page=require('./controller/admin')
 const adding_address=require('./controller/product_controll')
 
+const cartArr=[]
 
 const login_middleware_admin=(req,res,next)=>{
    (  req.session.admin_name &&req.session.admin_password)?next():res.render('admin_page',{message:'session expired'})
@@ -107,7 +108,20 @@ rout.use('/display_product',(req,res)=>{
 rout.use('/buy_product',login_middleware_user,(req,res)=>{
     adding_address.buy_product(req,res)
 })
+rout.use('/search',(req,res)=>{
+    adding_address.search_product(req,res)
+})
 rout.use('/signed_user',login_middleware_admin,(req,res)=>{
     authentication.signup_user(req,res)
 })
+rout.use('/cart/:_id',(req,res)=>{
+   adding_address.cart(req,res)
+})
+rout.use('/cartdisplay',(req,res)=>{
+    adding_address.cartdisplay(req,res)
+ })
+rout.use('/delete_cart/:_id',(req,res)=>{
+    adding_address.deletecart(req,res)
+})
+
 module.exports = rout

@@ -33,7 +33,13 @@
 </head>
 <body>
     <h1 align="center"> product add form</h1>
+
     <center>
+       <font color="red">
+           <h5 align="center"><%=message%></h5>
+    </font> 
+        
+
         <h3 align="right"><a href="/admin_check">go back to admin pannel</a></h3>
         <form action="/addproduct" enctype="multipart/form-data" method="post">
             product image : <input type="file"name="photo", placeholder="add the product image here"><br><br>
@@ -43,7 +49,6 @@
             <button>add product</button>
         </form>
     </center>
-    <h1 align="center"><%=message%></h1>
     
 </body>
 </html>
